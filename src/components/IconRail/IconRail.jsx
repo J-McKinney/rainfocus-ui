@@ -4,10 +4,10 @@ import UserAvatar from "../UserAvatar/UserAvatar";
 import smallMtnIcon from "../../icons/smallMtnIcon.png";
 
 // left railing, left of the side nav
-export default function IconRail() {
+export default function IconRail({ onLogoClick }) {
     return (
         <div className="icon-rail">
-            <RfLogo className="icon-rail__logo" />
+            <RfLogo className="icon-rail__logo" onClick={onLogoClick} />
 
             <button
                 type="button"

@@ -27,6 +27,22 @@
     --rf-radius-md: 8px;
 }
 
+:root[data-theme="dark"] {
+    --rf-purple-soft: #241a3d;
+
+    --rf-ink: #ffffff;
+    --rf-heading: #f5f5f7;
+    --rf-body: #cfcbe0;
+    --rf-subtle: #9a9aa5;
+    --rf-nav-item: #b0b0b5;
+    --rf-placeholder: #74747a;
+
+    --rf-surface: #17171b;
+    --rf-border: #2c2c33;
+    --rf-card-border: #2c2c33;
+    --rf-dot: #4a4a52;
+}
+
 html,
 body,
 #root {
@@ -40,4 +56,5 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }

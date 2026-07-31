@@ -1,5 +1,4 @@
 import IconSlot from "./IconSlot";
-
 import rfLogo from "../../icons/rf-logo.png";
 import turnArrow from "../../icons/turnArrow.png";
 import addCircleOutline from "../../icons/add-circle-outline.png";
@@ -10,13 +9,14 @@ import notSelectedDot from "../../icons/notSelectedDot.png";
 import search from "../../icons/search.svg";
 
 // icons
-export function RfLogo({ className }) {
+export function RfLogo({ className, onClick }) {
     return (
         <IconSlot
             width={28}
             height={23}
             className={className}
             label="RainFocus"
+            onClick={onClick}
         >
             <img src={rfLogo} alt="RainFocus Logo" />
         </IconSlot>

@@ -8,6 +8,7 @@ export default function IconSlot({
     round = false,
     className = "",
     label,
+    onClick,
     children,
 }) {
     return (
@@ -17,10 +18,12 @@ export default function IconSlot({
                 width,
                 height,
                 borderRadius: round ? "50%" : radius,
+                cursor: onClick ? "pointer" : undefined,
             }}
             role={label ? "img" : undefined}
             aria-label={label}
             aria-hidden={label ? undefined : "true"}
+            onClick={onClick}
         >
             {children}
         </span>
