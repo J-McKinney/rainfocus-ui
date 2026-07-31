@@ -4,6 +4,7 @@ import EventHeader from "./components/EventHeader/EventHeader";
 import SetupGuide from "./components/SetupGuide/SetupGuide";
 import useDarkMode from "./hooks/useDarkMode";
 import useNeonMode from "./hooks/useNeonMode";
+import useNeumorphismMode from "./hooks/useNeumorphismMode";
 import useConfetti from "./hooks/useConfetti";
 
 const EVENT = {
@@ -16,6 +17,7 @@ const EVENT = {
 export default function App() {
     const [, toggleDarkMode] = useDarkMode();
     const [, toggleNeon] = useNeonMode();
+    const [, toggleNeumorphism] = useNeumorphismMode();
     const confettiBurst = useConfetti();
 
     const handleEventIconClick = (e) => {
@@ -30,6 +32,7 @@ export default function App() {
                 event={EVENT}
                 onLogoClick={toggleDarkMode}
                 onEventIconClick={handleEventIconClick}
+                onUserAvatarClick={toggleNeumorphism}
             />
 
             <main className="app__main">

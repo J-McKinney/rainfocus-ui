@@ -27,6 +27,9 @@
     --rf-nav-width: 215px;
     --rf-radius-sm: 6px;
     --rf-radius-md: 8px;
+
+    --neu-light: rgba(255, 255, 255, 0.85);
+    --neu-dark: rgba(163, 177, 198, 0.55);
 }
 
 :root[data-theme="dark"] {
@@ -45,6 +48,9 @@
     --rf-card-border: #45454f;
     --rf-dot: #4a4a52;
     --rf-logo-bg: #ffffff;
+
+    --neu-light: rgba(255, 255, 255, 0.05);
+    --neu-dark: rgba(0, 0, 0, 0.7);
 }
 
 html,
@@ -61,4 +67,75 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+// neumorphism mode: soft dual-shadow "extruded" surfaces app-wide, toggled via the FL avatar
+:root[data-neumorphism="on"] {
+    .card {
+        border-color: transparent;
+        border-radius: 20px;
+        box-shadow: 8px 8px 16px var(--neu-dark), -8px -8px 16px var(--neu-light);
+        transition: box-shadow 0.2s ease;
+    }
+
+    .card:active {
+        box-shadow: inset 4px 4px 8px var(--neu-dark), inset -4px -4px 8px var(--neu-light);
+    }
+
+    .icon-rail {
+        border-right: none;
+        box-shadow: 6px 0 16px var(--neu-dark);
+    }
+
+    .icon-rail__logo {
+        padding: 6px;
+        border-radius: 12px;
+        box-shadow: 4px 4px 8px var(--neu-dark), -4px -4px 8px var(--neu-light);
+    }
+
+    .icon-rail__event {
+        border-radius: 10px;
+        box-shadow: 4px 4px 8px var(--neu-dark), -4px -4px 8px var(--neu-light);
+        transition: box-shadow 0.2s ease;
+    }
+
+    .icon-rail__event:active {
+        box-shadow: inset 3px 3px 6px var(--neu-dark), inset -3px -3px 6px var(--neu-light);
+    }
+
+    .user-avatar {
+        background: var(--rf-surface);
+        color: var(--rf-ink);
+        box-shadow: 4px 4px 8px var(--neu-dark), -4px -4px 8px var(--neu-light);
+        transition: box-shadow 0.2s ease;
+    }
+
+    .user-avatar:active {
+        box-shadow: inset 3px 3px 6px var(--neu-dark), inset -3px -3px 6px var(--neu-light);
+    }
+
+    .button--primary {
+        background: var(--rf-surface);
+        color: var(--rf-purple-active-text);
+        box-shadow: 5px 5px 10px var(--neu-dark), -5px -5px 10px var(--neu-light);
+        transition: box-shadow 0.2s ease;
+    }
+
+    .button--primary:hover {
+        background: var(--rf-surface);
+    }
+
+    .button--primary:active {
+        box-shadow: inset 3px 3px 6px var(--neu-dark), inset -3px -3px 6px var(--neu-light);
+    }
+
+    .search-field {
+        border-color: transparent;
+        background: var(--rf-surface);
+        box-shadow: inset 3px 3px 6px var(--neu-dark), inset -3px -3px 6px var(--neu-light);
+    }
+
+    .side-nav__item--active {
+        box-shadow: 3px 3px 6px var(--neu-dark), -3px -3px 6px var(--neu-light);
+    }
 }

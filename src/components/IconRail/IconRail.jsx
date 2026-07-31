@@ -4,7 +4,11 @@ import UserAvatar from "../UserAvatar/UserAvatar";
 import smallMtnIcon from "../../icons/smallMtnIcon.png";
 
 // left railing, left of the side nav
-export default function IconRail({ onLogoClick, onEventIconClick }) {
+export default function IconRail({
+    onLogoClick,
+    onEventIconClick,
+    onUserAvatarClick,
+}) {
     return (
         <div className="icon-rail">
             <RfLogo className="icon-rail__logo" onClick={onLogoClick} />
@@ -22,7 +26,7 @@ export default function IconRail({ onLogoClick, onEventIconClick }) {
 
             <div className="icon-rail__spacer" />
 
-            <UserAvatar initials="FL" />
+            <UserAvatar initials="FL" onClick={onUserAvatarClick} />
         </div>
     );
 }
