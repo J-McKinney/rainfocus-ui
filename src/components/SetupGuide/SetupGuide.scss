@@ -1,0 +1,23 @@
+.setup-guide {
+    margin-top: 41px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        color: var(--rf-heading);
+    }
+
+    &__intro {
+        margin-top: 13px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--rf-body);
+    }
+
+    &__divider {
+        margin-top: 43px;
+        border-top: 1px solid var(--rf-border);
+    }
+}

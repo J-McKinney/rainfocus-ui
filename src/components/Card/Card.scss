@@ -1,0 +1,9 @@
+.card {
+    display: block;
+    width: 100%;
+    background: var(--rf-surface);
+    border: 1px solid var(--rf-card-border);
+    border-radius: var(--rf-radius-md);
+    font-family: var(--rf-font);
+    text-align: left;
+}

@@ -1,0 +1,41 @@
+.event-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    &__avatar {
+        margin-top: 0;
+    }
+
+    &__title-block {
+        flex: 1 1 auto;
+        min-width: 0;
+        padding-top: 1px;
+    }
+
+    &__name {
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 38px;
+        color: var(--rf-heading);
+    }
+
+    &__meta {
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--rf-body);
+
+        & + & {
+            margin-top: 0;
+        }
+    }
+
+    // below 480px the button moves into the nav's footer.
+    @media (max-width: 480px) {
+        .event-header__edit-button {
+            display: none;
+        }
+    }
+}

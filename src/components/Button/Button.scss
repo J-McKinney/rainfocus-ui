@@ -1,0 +1,23 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    padding: 0 20px;
+    border-radius: var(--rf-radius-sm);
+    font-family: var(--rf-font);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    margin-top: 0px;
+
+    &--primary {
+        background: var(--rf-purple);
+        color: #ffffff;
+
+        &:hover {
+            background: var(--rf-purple-hover);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.base-settings-card {
+    padding: 24px 31px 25px;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 50px;
+
+        @media (max-width: 1200px) {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+    }
+
+    &__col-title {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 16px;
+        color: var(--rf-heading);
+    }
+
+    &__col-desc {
+        margin-top: 3px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        color: var(--rf-body);
+    }
+}

@@ -1,0 +1,43 @@
+// index.scss | global design tokens
+
+:root {
+    --rf-purple: #5c00dc;
+    --rf-purple-hover: #4a00b0;
+    --rf-purple-soft: #f0eafc;
+
+    --rf-ink: #000000;
+    --rf-heading: #222222;
+    --rf-body: #393551;
+    --rf-subtle: #86868b;
+    --rf-nav-item: #767676;
+    --rf-placeholder: #9a9aa0;
+
+    --rf-surface: #ffffff;
+    --rf-border: #e6e6e9;
+    --rf-card-border: #e2e2e5;
+    --rf-dot: #b4b4ba;
+
+    --rf-font:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+
+    --rf-rail-width: 63px;
+    --rf-nav-width: 215px;
+    --rf-radius-sm: 6px;
+    --rf-radius-md: 8px;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    font-family: var(--rf-font);
+    color: var(--rf-ink);
+    background: var(--rf-surface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}

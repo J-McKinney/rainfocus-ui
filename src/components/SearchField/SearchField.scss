@@ -1,0 +1,33 @@
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 28px;
+    padding: 0 9px;
+    border: 1px solid var(--rf-border);
+    border-radius: var(--rf-radius-sm);
+    background: whitesmoke;
+
+    &__icon {
+        color: var(--rf-placeholder);
+    }
+
+    &__input {
+        width: 100%;
+        min-width: 0;
+        font-family: var(--rf-font);
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 1;
+        color: var(--rf-ink);
+
+        &::placeholder {
+            color: var(--rf-nav-item);
+            opacity: 1;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

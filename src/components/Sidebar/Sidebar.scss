@@ -1,0 +1,99 @@
+.sidebar {
+    display: flex;
+    flex: none;
+    width: calc(
+        var(--rf-rail-width) + var(--rf-nav-width)
+    );
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background: var(--rf-surface);
+
+    &__toggle {
+        display: none;
+    }
+
+    &__backdrop {
+        display: none;
+    }
+
+    @media (max-width: 992px) {
+        &__toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 19px;
+            left: 14px;
+            z-index: 40;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            background: var(--rf-surface);
+            border: 1px solid var(--rf-border);
+            border-radius: var(--rf-radius-sm);
+            opacity: 1;
+            pointer-events: auto;
+            transition: opacity 0s linear 0.2s;
+        }
+
+        &__toggle-bar,
+        &__toggle-bar::before,
+        &__toggle-bar::after {
+            position: absolute;
+            width: 16px;
+            height: 2px;
+            background: var(--rf-ink);
+            border-radius: 1px;
+            content: "";
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease,
+                top 0.2s ease,
+                background 0.2s ease;
+        }
+
+        &__toggle-bar {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &__toggle-bar::before {
+            top: -5px;
+        }
+
+        &__toggle-bar::after {
+            top: 5px;
+        }
+
+        &__toggle[aria-expanded="true"] {
+            opacity: 0;
+            pointer-events: none;
+            transition-delay: 0s;
+        }
+
+        &__backdrop {
+            display: block;
+            position: fixed;
+            inset: 0;
+            z-index: 20;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        & {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 30;
+            height: 100vh;
+            transform: translateX(-100%);
+            box-shadow: 0 0 0 1px var(--rf-border);
+            transition: transform 0.2s ease;
+        }
+
+        &--open {
+            transform: translateX(0);
+        }
+    }
+}

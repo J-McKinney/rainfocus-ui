@@ -1,0 +1,32 @@
+.workflow-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 116px;
+    padding: 25px 23px;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__icon {
+        color: var(--rf-purple);
+    }
+
+    &__title {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 16px;
+        color: var(--rf-heading);
+    }
+
+    &__desc {
+        margin: 10px 0 0 10px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        color: var(--rf-heading);
+    }
+}
