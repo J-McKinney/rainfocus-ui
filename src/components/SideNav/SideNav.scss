@@ -68,10 +68,10 @@
 
         &--active {
             background: var(--rf-purple-soft);
-            color: var(--rf-purple);
+            color: var(--rf-purple-active-text);
 
             .side-nav__dot:not(.icon-slot--filled) {
-                background: var(--rf-purple);
+                background: var(--rf-purple-active-text);
             }
         }
     }

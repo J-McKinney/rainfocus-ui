@@ -11,6 +11,11 @@
 
     &__logo {
         flex: none;
+        background: var(--rf-logo-bg);
+
+        :root[data-theme="dark"] & {
+            padding: 2px;
+        }
     }
 
     &__event {
