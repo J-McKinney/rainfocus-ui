@@ -3,6 +3,8 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import EventHeader from "./components/EventHeader/EventHeader";
 import SetupGuide from "./components/SetupGuide/SetupGuide";
 import useDarkMode from "./hooks/useDarkMode";
+import useNeonMode from "./hooks/useNeonMode";
+import useConfetti from "./hooks/useConfetti";
 
 const EVENT = {
     name: "RainFocus Summit",
@@ -13,10 +15,22 @@ const EVENT = {
 
 export default function App() {
     const [, toggleDarkMode] = useDarkMode();
+    const [, toggleNeon] = useNeonMode();
+    const confettiBurst = useConfetti();
+
+    const handleEventIconClick = (e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        confettiBurst(rect.left + rect.width / 2, rect.top + rect.height / 2);
+        toggleNeon();
+    };
 
     return (
         <div className="app">
-            <Sidebar event={EVENT} onLogoClick={toggleDarkMode} />
+            <Sidebar
+                event={EVENT}
+                onLogoClick={toggleDarkMode}
+                onEventIconClick={handleEventIconClick}
+            />
 
             <main className="app__main">
                 <div className="app__content">

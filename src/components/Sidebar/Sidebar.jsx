@@ -4,7 +4,7 @@ import IconRail from "../IconRail/IconRail";
 import SideNav from "../SideNav/SideNav";
 
 // the whole sidebar: nav, icon railing, and side nav
-export default function Sidebar({ event, onLogoClick }) {
+export default function Sidebar({ event, onLogoClick, onEventIconClick }) {
     const [open, setOpen] = useState(false);
 
     return (
@@ -27,7 +27,10 @@ export default function Sidebar({ event, onLogoClick }) {
             )}
 
             <div className={`sidebar ${open ? "sidebar--open" : ""}`}>
-                <IconRail onLogoClick={onLogoClick} />
+                <IconRail
+                    onLogoClick={onLogoClick}
+                    onEventIconClick={onEventIconClick}
+                />
                 <SideNav event={event} onClose={() => setOpen(false)} />
             </div>
         </>

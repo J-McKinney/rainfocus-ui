@@ -4,7 +4,7 @@ import UserAvatar from "../UserAvatar/UserAvatar";
 import smallMtnIcon from "../../icons/smallMtnIcon.png";
 
 // left railing, left of the side nav
-export default function IconRail({ onLogoClick }) {
+export default function IconRail({ onLogoClick, onEventIconClick }) {
     return (
         <div className="icon-rail">
             <RfLogo className="icon-rail__logo" onClick={onLogoClick} />
@@ -13,6 +13,7 @@ export default function IconRail({ onLogoClick }) {
                 type="button"
                 className="icon-rail__event"
                 aria-label="RainFocus Summit"
+                onClick={onEventIconClick}
             >
                 <EventAvatar size={31} radius={6}>
                     <img src={smallMtnIcon} alt="Event Avatar" />

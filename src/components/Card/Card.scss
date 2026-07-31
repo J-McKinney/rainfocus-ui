@@ -6,4 +6,13 @@
     border-radius: var(--rf-radius-md);
     font-family: var(--rf-font);
     text-align: left;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    :root[data-neon="on"] & {
+        border: 2px solid transparent;
+        background:
+            linear-gradient(var(--rf-surface), var(--rf-surface)) padding-box,
+            linear-gradient(135deg, #7c4dff, #2d8bff, #00e5ff) border-box;
+        box-shadow: 0 0 10px rgba(124, 77, 255, 0.4), 0 0 24px rgba(124, 77, 255, 0.4);
+    }
 }
